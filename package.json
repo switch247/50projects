@@ -1,0 +1,16 @@
+{
+  "name": "50projects",
+  "version": "1.0.0",
+  "description": "1. expanding cards\r 2. progress steps\r 3 .todo list\r 4. rotating navigation\r 5. hidden search widget\r 6. blury loading %\r 7.scroll animation\r 8.split landing page\r 9.wave form\r 10.sound board",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
