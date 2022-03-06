@@ -1,2 +1,6 @@
 /Others
 /node_modules
+# Local Netlify folder
+.netlify
+/functions-build
+/netlify

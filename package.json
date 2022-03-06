@@ -1,16 +1,23 @@
 {
   "name": "50projects",
   "version": "1.0.0",
-  "description": "1. expanding cards\r 2. progress steps\r 3 .todo list\r 4. rotating navigation\r 5. hidden search widget\r 6. blury loading %\r 7.scroll animation\r 8.split landing page\r 9.wave form\r 10.sound board",
+  "description": "collection of more than 50 html css javascript projects",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "NODE_ENV=development nodemon functions/server.js",
+    "start": "netlify dev",
+    "build": "netlify build",
+    "deploy": "netlify deploy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "netlify-cli": "^17.37.2",
+    "netlify-lambda": "^2.0.16",
+    "nodemon": "^3.1.7",
+    "serverless-http": "^3.2.0"
   }
 }

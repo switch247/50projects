@@ -221,7 +221,7 @@
     <script>
         // Fetch and display folders
         function fetchFolders() {
-            fetch('/folders')
+            fetch('.netlify/functions/server/folders')
                 .then(response => response.json())
                 .then(folders => {
                     const directoryList = document.getElementById('directory-list');
