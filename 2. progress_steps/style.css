@@ -1,0 +1,48 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    /* height: 3000px; Used to enable scrolling */
+    /* background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%); */
+}  
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  } 
+.dark-mode {
+    background-color: black;
+    color: white;
+  }  
+
+.expanding-cards-container{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%); */
+
+    padding: 20px;
+}
+.expanding-cards-container .image-card button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* margin: 10px; */
+}
+.expanding-cards-container .image-card .expand{
+    background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%);
+    /* margin: 10px; */
+    transition: 300ms ;
+}
+.expanding-cards-container .image-card::after{
+    display: flex;
+    flex-direction: column;
+    content: "step";
+}
