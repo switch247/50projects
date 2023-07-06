@@ -1,0 +1,5 @@
+let search_bar =document.querySelector(".search-container")
+let search_icon = document.getElementById("search-icon")
+let close_icon = document.querySelector("#close-icon")
+search_icon.addEventListener('click',()=>search_icon.parentElement.classList.toggle("active"))
+close_icon.addEventListener('click',()=>document.getElementById('input-bar').value='') 
