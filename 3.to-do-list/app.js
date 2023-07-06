@@ -1,7 +1,7 @@
 let inputs = document.getElementById("inp");
-let dash =document.querySelector(".list ul")
+let dash =document.querySelector(".to-do-list ul")
 
-icons = document.querySelectorAll(".list i")
+icons = document.querySelectorAll(".to-do-list i")
 icons.forEach(element => {
     element.addEventListener('click',  function(){
         element.parentElement.parentElement.remove()

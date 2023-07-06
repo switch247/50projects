@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #333;
+    color:#222;
+    overflow-x: hidden;
+    margin: 0;
+}
+.main{
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+.main.show-nav{
+    transform: rotate(-20deg);
+}
+
+.circle-nav{
+    position:fixed;
+    top: -100px;
+    left:-100px;
+}
+.circle-nav .circle{
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+.main.show-nav .circle-nav .circle{
+    transform: rotate(-70deg);
+}
+
+.circle-nav .circle button{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height:100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+.circle-nav .circle button:focus{
+    outline: none;
+}
+.circle-nav .circle button#open{
+    left:60%;
+}
+.circle-nav .circle button#close{
+    left:60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+/* .circle-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+.main.show-nav + nav li{
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+nav{
+    position:fixed;
+    bottom: 20px;
+    left:0;
+    z-index: 100;
+}
+nav ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+nav ul li{
+    text-transform: uppercase;
+    color:#fff;
+    margin: 20px 0;
+    transform: translateX(-100%);
+    transition: 0.4s ease-in;
+    /* makes them slide in */
+
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+nav ul li +li{
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+nav ul li + li +li{
+    margin-left: 30px;
+    transform: translateX(-200%);
+
+}
+
+.the{
+    width: 100vw;
+    height: 1000px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    margin: 50px auto;
+    background-color: #fafafa;
+}
+
+

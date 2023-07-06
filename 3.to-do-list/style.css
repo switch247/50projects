@@ -9,60 +9,62 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #111;
+    background: url('https://source.unsplash.com/1600x900');
 }
 
-.list {
+.to-do-list {
     position: relative;
     width: 350px;
     background-color: #fff;
     border-radius: 1em;
     /* padding: 10px; */
 }
-.list h1{
+.to-do-list h1{
     background-color: #03a9f4;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     color: #fff;
     padding: 10px 20px;
     font-weight: 600;
+
     /* display: flex;
     justify-content: center;
     align-items: center; */
+
 }
 
-.list ul {
+.to-do-list ul {
     position: relative;
     padding: 20px;
 }
 
-.list ul li {
+.to-do-list ul li {
     position: relative;
     padding: 15px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 1);
     list-style: none;
 }
-.list ul li:last-child{
+.to-do-list ul li:last-child{
     border-bottom: none;
 }
 
-.list ul li label{
+.to-do-list ul li label{
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
 }
-.list ul li label input{
+.to-do-list ul li label input{
     visibility: hidden;
     appearance: none;
 
 }
-.list ul li label p{
+.to-do-list ul li label p{
   position:absolute;
 }
 
-.list ul li label span{
+.to-do-list ul li label span{
     position: relative;
     width: 20px;
     height: 20px;
@@ -73,7 +75,7 @@ body {
     align-items: center;
 }
 
-.list ul li label span::before{
+.to-do-list ul li label span::before{
     /* this creates a check mark */
     content: '';
     position: absolute;
@@ -86,20 +88,20 @@ body {
 
 }
 
-.list ul li label input:checked ~ p{
+.to-do-list ul li label input:checked ~ p{
     text-decoration: line-through;
     color: #ccc;
 }
-.list ul li label input:checked ~ span{
+.to-do-list ul li label input:checked ~ span{
     background-color: #03a9f4;
 }
-.list ul li label input:checked ~ span::before{
+.to-do-list ul li label input:checked ~ span::before{
     border-left: 2px solid #fff;
     border-bottom: 2px solid #fff;
 }
 
 
-.form{
+.to-do-list .form{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,10 +109,9 @@ body {
     gap: 10px;
 }
 
-.list ul li label i{
+.to-do-list ul li label i{
     position:absolute;
     left: -20px;
     margin-left: 5px;
     margin-right: 5px;
-
 }
