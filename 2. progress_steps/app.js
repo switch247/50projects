@@ -1,20 +1,33 @@
-    var x = document.querySelectorAll(".image-card button")
-// console.log(x)
-x.forEach(element => {
-    element.addEventListener('click', function () {
-        rem(x)
-        element.classList.toggle("expand")
-        // console.log(element)
-    });
 
-});
+var level=1
+var x = document.querySelectorAll(".circle")
+var progress= document.querySelector(".progress")
+// console.log(x)
+// x.forEach(element => {
+//     element.addEventListener('click', function () {
+//         rem(x)
+//         element.classList.toggle("expand")
+//         // console.log(element)
+//     });
+
+// });
 
 function rem(x){
     x.forEach(element => {
-        element.classList.remove("expand")
+        element.classList.remove("active")
     });
 }
 
-function darkmode(){
-    document.querySelector('body').classList.toggle('dark-mode')
+
+
+function prev(){
+    x[level].classList.remove("active")
+    if(level >1){level--}
+    progress.style.width= (document.querySelectorAll(".active").length - 1) /(x.length -1) * 100 +'%'
+}
+function next(){
+    x[level].classList.add("active")
+    if(level < x.length-1){level++}
+    progress.style.width= (document.querySelectorAll(".active").length - 1) /(x.length -1) * 100 +'%'
+    
 }

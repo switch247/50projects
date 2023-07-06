@@ -6,28 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progress Steps</title>
     <link rel="stylesheet" href="style.css">
-<script src="app.js" defer></script>
+    <script src="app.js" defer></script>
 </head>
 
 <body>
-    <button onclick="darkmode()">dark</button>
-    <div class="expanding-cards-container">
-        <div class="image-card">
-            <button>1</button>
+    <!-- <button onclick="darkmode()">dark</button> -->
+    <div class="progress-container">
+        <div class="progress"></div>
+        <div class="circle active">
+            1
         </div>
-        <div class="image-card">
-            <button>2</button>
+        <div class="circle">
+            2
         </div>
-        <div class="image-card">
-            <button>3</button>
+        <div class="circle">
+            3</div>
+        <div class="circle">
+            4
         </div>
-        <div class="image-card">
-            <button>4</button>
+        <div class="circle">
+            5
         </div>
-        <div class="image-card">
-            <button>5</button>
-        </div>
-    
+    </div>
+    <div class="nav-buts">
+        <button onclick="prev()" class="btn">previous</button>
+        <button onclick="next()" class="btn">next</button>
     </div>
 </body>
 

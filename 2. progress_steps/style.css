@@ -1,48 +1,94 @@
-html{
+html {
     box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     /* height: 3000px; Used to enable scrolling */
     /* background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%); */
-}  
+}
+
 body {
     padding: 25px;
     background-color: white;
     color: black;
     font-size: 25px;
-  } 
-.dark-mode {
-    background-color: black;
-    color: white;
-  }  
+}
 
-.expanding-cards-container{
+
+
+.progress-container {
     /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     /* background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%); */
-
+    position: relative;
     padding: 20px;
 }
-.expanding-cards-container .image-card button{
+
+.progress-container .circle {
+    border: 3px solid #e0e0e0;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    /* margin: 10px; */
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
 }
-.expanding-cards-container .image-card .expand{
-    background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%);
-    /* margin: 10px; */
-    transition: 300ms ;
+
+.progress-container .circle.active {
+    border-color: #9610ef;
 }
-.expanding-cards-container .image-card::after{
+
+.progress-container .circle::after {
     display: flex;
     flex-direction: column;
-    content: "step";
+    /* content: "step"; */
+}
+
+.progress-container::before {
+    content: '';
+    position: absolute;
+    background-color: #e0e0e0;
+    top: 50%;
+    left:0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+.progress{
+    position: absolute;
+    background-color: #9610ef;
+    top: 50%;
+    left:0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+
+
+}
+
+
+
+
+.nav-buts {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.nav-buts .btn {
+    background: #9610ef;
+    border-radius: 1em;
 }
