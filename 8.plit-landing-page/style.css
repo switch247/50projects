@@ -1,0 +1,38 @@
+body
+{   
+    box-sizing:border-box;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.left{
+    width: 100vw;
+    flex: 1;
+    background-color: black;
+    background: url('https://source.unsplash.com/1600x900') no-repeat center center/cover;
+    transition: 0.8s ease-in;
+}
+
+.right{
+    width: 100%;
+    flex:1;
+    background-color: blue;
+    background: url('https://source.unsplash.com/1600x900/?city') no-repeat center center/cover;
+    transition: 0.8s ease-in;
+}
+
+.left:hover{
+    flex: 2;
+}
+.right:hover{
+    flex: 2;
+}
